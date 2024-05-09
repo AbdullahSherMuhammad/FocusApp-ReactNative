@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, NativeEventEmitter } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { TextInput } from "react-native-paper";
 import { RoundedButton } from "../Components/RoundedButton";
-import { fontSizes, paddingSizes, marginSizes } from "../Utils/sizes";
+import { size, space } from "../Utils/sizes";
 import { appColors } from "../Utils/appColors";
 
 export const Focus = ({ addSubject }) => {
@@ -10,7 +10,7 @@ export const Focus = ({ addSubject }) => {
   return (
     <View style={styles.container}>
       <View style={styles.titlecontainer}>
-        <Text style={styles.title}>What do you want to Focus on?</Text>
+        <Text style={styles.title}>What do you want to concentrate on?</Text>
       </View>
       <View style={styles.InputContainer}>
         <TextInput
@@ -39,22 +39,23 @@ export const Focus = ({ addSubject }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // padding: paddingSizes.xxxl,
+    // padding: space.xxxl,
   },
   titlecontainer: {
-    paddingTop: paddingSizes.xxxl,
-    paddingBottom: paddingSizes.xl,
-    display: "flex",
+    flex: 1,
+    paddingTop: space.xxxl,
+    paddingBottom: space.xl,
     justifyContent: "center",
   },
   title: {
     color: appColors.themeMagenda,
+    fontSize: 50,
     fontWeight: "bold",
-    fontSize: fontSizes.lg,
   },
   InputContainer: {
     flexDirection: "row",
     alignItems: "center",
+    paddingBottom: space.xl,
   },
   textInputbox: {
     flex: 1,

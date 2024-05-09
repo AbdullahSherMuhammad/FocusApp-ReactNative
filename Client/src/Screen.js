@@ -9,9 +9,9 @@ import {
   ScrollView,
 } from "react-native";
 import { Focus } from "./Features/Focus.js";
-import { Timer } from "./Features/Timer.js";
+import { Timerpanel } from "./Features/Timerpanel.js";
 import { appColors } from "./Utils/appColors.js";
-import { paddingSizes } from "./Utils/sizes.js";
+import { size, space } from "./Utils/sizes.js";
 
 // Dimensions.get("screen").width; stays fix to screen dimensions and
 // wont change with screen rotations or split screens
@@ -47,9 +47,10 @@ export function Screen() {
         <View style={styles.focus}>
           <Focus addSubject={setFocusSubject} />
         </View>
-        <View style={styles.timer}>
-          <Timer focusSubject={focusSubject} />
+        <View style={styles.timerpanel}>
+          <Timerpanel focusSubject={focusSubject} />
         </View>
+
         <Text>
           {dimensions.window.height} and {width} and screen is{" "}
           {dimensions.screen.height}
@@ -64,20 +65,20 @@ const styles = StyleSheet.create({
     flex: 1,
     width: Screen.width,
     height: Screen.height,
-    paddingTop: Platform === "ios" ? paddingSizes.lg : paddingSizes.xxxl,
+    paddingTop: Platform === "ios" ? size.lg : size.lg,
     backgroundColor: appColors.bgTeal,
   },
   contentcontainer: {
     alignItems: "flex-start",
-    paddingLeft: paddingSizes.md,
-    paddingRight: paddingSizes.md,
+    paddingLeft: space.md,
+    paddingRight: space.md,
   },
   focus: {
-    flex: 0.27,
+    flex: 1,
     alignSelf: "center",
-    paddingBottom: paddingSizes.md,
+    paddingBottom: space.md,
   },
-  timer: {
+  timerpanel: {
     flex: 0.5,
   },
 });
