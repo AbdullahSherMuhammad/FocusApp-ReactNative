@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, NativeEventEmitter } from "react-native";
 import { TextInput } from "react-native-paper";
 import { RoundedButton } from "../Components/RoundedButton";
+import { fontSizes, paddingSizes, marginSizes } from "../Utils/sizes";
+import { appColors } from "../Utils/appColors";
 
 export const Focus = ({ addSubject }) => {
   const [textEntered, setTextEntered] = useState("What?");
@@ -13,9 +15,9 @@ export const Focus = ({ addSubject }) => {
       <View style={styles.InputContainer}>
         <TextInput
           style={styles.textInputbox}
-          textColor="#720072"
-          cursorColor="#720072"
-          activeUnderlineColor="#720072"
+          textColor={appColors.themeMagenda}
+          cursorColor={appColors.themeMagenda}
+          activeUnderlineColor={appColors.themeMagenda}
           onSubmitEditing={({ nativeEvent }) => {
             addSubject(nativeEvent.text);
           }} // works with android's Go button on Android keyboard
@@ -37,18 +39,18 @@ export const Focus = ({ addSubject }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 50,
+    // padding: paddingSizes.xxxl,
   },
   titlecontainer: {
-    paddingTop: 50,
-    paddingBottom: 50,
+    paddingTop: paddingSizes.xxxl,
+    paddingBottom: paddingSizes.xl,
     display: "flex",
     justifyContent: "center",
   },
   title: {
-    color: "#720072",
+    color: appColors.themeMagenda,
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: fontSizes.lg,
   },
   InputContainer: {
     flexDirection: "row",

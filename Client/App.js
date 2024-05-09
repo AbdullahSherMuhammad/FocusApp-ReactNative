@@ -1,22 +1,26 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, useColorScheme } from "react-native";
-import { Focus } from "./src/Features/Focus";
+import React from "react";
+import { StyleSheet, Platform } from "react-native";
+import { appColors } from "./src/Utils/appColors.js";
+import { paddingSizes } from "./src/Utils/sizes.js";
+import { Screen } from "./src/Screen.js";
+import { Focus } from "./src/Features/Focus.js";
 
 export default function App() {
-  const colorScheme = useColorScheme();
-  const [focusSubject, setFocusSubject] = useState(null);
-  return (
-    <View style={styles.container}>
-      <Focus addSubject={setFocusSubject}></Focus>
-      <Text>{focusSubject}</Text>
-    </View>
-  );
+  return <Screen />;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#008080",
+
+    paddingTop: Platform === "ios" ? paddingSizes.lg : paddingSizes.xxxl,
+    backgroundColor: appColors.bgTeal,
     alignItems: "center",
+  },
+  focus: {
+    flex: 0.27,
+  },
+  timer: {
+    flex: 0.5,
   },
 });
