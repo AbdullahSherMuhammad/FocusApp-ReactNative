@@ -15,7 +15,7 @@ export const Focus = ({ addSubject }) => {
       <View style={styles.InputContainer}>
         <TextInput
           style={styles.textInputbox}
-          textColor={appColors.themeMagenda}
+          textColor={appColors.IvoryWhite}
           cursorColor={appColors.themeMagenda}
           activeUnderlineColor={appColors.themeMagenda}
           onSubmitEditing={({ nativeEvent }) => {

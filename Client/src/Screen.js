@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Text,
   View,
-  useColorScheme,
   Platform,
   Dimensions,
   ScrollView,
@@ -31,7 +30,6 @@ export function Screen() {
   const height = dimensions.window.height;
   const width = dimensions.window.width;
 
-  const colorScheme = useColorScheme();
   const [focusSubject, setFocusSubject] = useState(null);
   useEffect(() => {
     const subscription = Dimensions.addEventListener(
@@ -66,7 +64,6 @@ const styles = StyleSheet.create({
     width: Screen.width,
     height: Screen.height,
     paddingTop: Platform === "ios" ? size.lg : size.lg,
-    backgroundColor: appColors.bgTeal,
   },
   contentcontainer: {
     alignItems: "flex-start",
