@@ -9,19 +9,11 @@
     "web": "expo start --web"
   },
   "dependencies": {
-<<<<<<< HEAD
     "expo": "~51.0.6",
     "expo-status-bar": "~1.12.1",
     "metro-bundler": "^0.22.1",
     "react": "18.2.0",
     "react-native": "0.74.1",
-=======
-    "expo": "~50.0.17",
-    "expo-status-bar": "~1.11.1",
-    "metro-bundler": "^0.22.1",
-    "react": "18.2.0",
-    "react-native": "0.73.6",
->>>>>>> 4a1229d3e83b1dc3b15c6d49ae5881840bb8ca69
     "react-native-paper": "^5.12.3"
   },
   "devDependencies": {
