@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { View, StyleSheet, Dimensions } from "react-native";
 import { RoundedButton } from "../Components/RoundedButton";
 import { size, space } from "../Utils/sizes";
 import { GlobalStyles } from "../Utils/GlobalStyles";
+=======
+import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { Countdown } from "../Components/Countdown";
+import { RoundedButton } from "../Components/RoundedButton";
+import { size, space } from "../Utils/sizes";
+import { appColors } from "../Utils/appColors";
+>>>>>>> 4a1229d3e83b1dc3b15c6d49ae5881840bb8ca69
 
 const windowWidth = Dimensions.get("window").width;
 
